@@ -38,7 +38,6 @@ app.use("/api/v1/dashboard", dashboard);
 // http://localhost:5000/api/v1/dashboard/remove/item/:item_id
 // http://localhost:5000/api/v1/dashboard/update/item/:item_id
 // http://localhost:5000/api/v1/dashboard/fetch/orders/restaurant_id
-// req.params.email
 
 
 app.listen(port, () => console.log(`API Server listening on port ${port}`));
