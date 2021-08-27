@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const dashboard = require("./routes/api/dashboard");
-
+const consumer = require("./routes/api/consumer");
 
 const app = express();
 const port = 5000;
@@ -23,6 +23,7 @@ app.use(morgan("dev"));
 app.use(helmet());
 connectDB();
 app.use("/api/v1/dashboard", dashboard);
+app.use("/api/v1/consumer", consumer);
 
 
 // http://localhost:5000/api/v1/dashboard/restaurant/register
@@ -38,6 +39,7 @@ app.use("/api/v1/dashboard", dashboard);
 // http://localhost:5000/api/v1/dashboard/remove/item/:item_id
 // http://localhost:5000/api/v1/dashboard/update/item/:item_id
 // http://localhost:5000/api/v1/dashboard/fetch/orders/restaurant_id
+// http://localhost:5000/api/v1/consumer/add/order
 
 
 app.listen(port, () => console.log(`API Server listening on port ${port}`));

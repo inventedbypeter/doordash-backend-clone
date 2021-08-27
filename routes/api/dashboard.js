@@ -257,7 +257,7 @@ router.put("/update/item/:item_id", async (req, res) => {
     }
 })
 
-router.get("/fetch/orders/restaurant_id", async (req, res) => {
+router.get("/fetch/orders/:restaurant_id", async (req, res) => {
     const restaurantId = req.params.restaurant_id;
     const objectRestaurantId = ObjectId(restaurantId);
 
