@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
 app.use(morgan("dev"));
 app.use(helmet());
 connectDB();
-appuse("/api/v1/dashboard", dashboard);
+app.use("/api/v1/dashboard", dashboard);
 app.use("/api/v1/consumer", consumer);
 
 
